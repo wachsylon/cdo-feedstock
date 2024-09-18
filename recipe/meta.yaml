@@ -1,20 +1,21 @@
-{% set version = "2.2.0" %}
+{% set version = "2.4.1" %}
 
 package:
   name: cdo
   version: {{ version }}
 
 source:
-  url: https://code.mpimet.mpg.de/attachments/download/28013/cdo-{{ version }}.tar.gz
-  sha256: 679c8d105706caffcba0960ec5ddc4a1332c1b40c52f82c3937356999d8fadf2
+  url: https://code.mpimet.mpg.de/attachments/download/29421/cdo-{{ version }}.tar.gz
+  sha256: 9144d82b8ab7e73f4cb7a94cc4b884f64dff1a0455c4eb6c93ce4b568007aabf
 
 build:
-  number: 5
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - gnuconfig  # [unix]

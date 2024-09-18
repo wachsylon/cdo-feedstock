@@ -4,7 +4,7 @@ if [[ $(uname) == 'Darwin' ]]; then
   export CC=clang
   export CXX=clang++
   export CFLAGS="${CFLAGS} -lm"
-  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS}"
+  export CXXFLAGS="-fPIC -DPIC -g -O2 ${CFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
   export CPP=clang-cpp
   export LDFLAGS="${LDFLAGS} -fopenmp"
   export LIBS="-ljson-c"
